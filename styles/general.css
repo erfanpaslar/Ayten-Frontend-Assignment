@@ -1,3 +1,6 @@
+:root {
+  --littleIconsColor: rgb(29, 155, 240);
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;

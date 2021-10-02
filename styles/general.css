@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500&display=swap');
 :root {
   --littleIconsColor: rgb(29, 155, 240);
 }
+*{
+  -webkit-tap-highlight-color: transparent;
+}
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
 }

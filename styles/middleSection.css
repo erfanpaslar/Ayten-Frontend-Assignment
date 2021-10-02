@@ -1,13 +1,226 @@
+.tweet{
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #eff3f4;
+  padding-top:1rem;
+  padding-right:1rem;
+  cursor: pointer;
+
+}
+.tweetIconsAndContent{
+  display: flex;
+  flex-direction: column;
+}
+.tweetIconsAndContent p{
+  margin-top:0rem
+}
+.tweetTopSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color:#575757;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+.tweetTopSection div{
+  margin: auto 0;
+}
+.dot:before{
+  content: " \B7 ";
+
+}
+.tweetIcons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding-left:0;
+  margin-right:3rem
+}
+.tweetIcons li{
+  display: flex;
+}
+.tweetIcons li svg{
+  width:1.2rem;
+  vertical-align:text-bottom;
+  fill:#575757;
+}
+.tweetIcons li span{
+  display: inline;
+  margin:auto;
+  margin-left:.4rem
+}
+
+.threeDots{
+  display:flex;
+  width:2rem;
+  height:2rem;
+  border-radius: 50%;
+}
+
+.tweetCommentsSvg,
+.tweetRetweetSvg,
+.tweetLikeSvg,
+.tweetShareSvg,
+.threeDotsSvg{
+  fill:#536471;
+  padding:.3rem;
+  border-radius:50%;
+  transition: fill .2s;
+  transition: background-color .2s;
+}
+
+.threeDotsSvg{
+  fill:#000;
+}
+
+.tweetCommentsSvg:hover,
+.tweetRetweetSvg:hover,
+.tweetLikeSvg:hover,
+.tweetShareSvg:hover,
+.threeDotsSvg:hover{
+  transition: fill .2s;
+  transition: background-color .2s;
+}
+
+.tweetRetweetSvg:hover{
+  fill: #29db4f;
+  
+}
+.tweetLikeSvg:hover{
+  fill: #f91880;
+
+}
+
+.tweetCommentsSvg:hover,
+.tweetShareSvg:hover,
+.threeDotsSvg:hover{
+  fill: #1d9af1;
+}
 
 
+.tweetRetweetSvg:hover{
+  background-color: #29db4f40;
+}
+.tweetRetweetSvg:hover + span{
+  color: #29db4f;
+}
+.tweetLikeSvg:hover{
+  background-color: #f9188040;
+}
+.tweetLikeSvg:hover + span{
+  color: #f91880;
+}
+
+
+.tweetCommentsSvg:hover,
+.tweetShareSvg:hover,
+.threeDotsSvg:hover{
+  background-color: #1d9af140;
+}
+.tweetCommentsSvg:hover + span,
+.tweetShareSvg:hover + span,
+.threeDotsSvg:hover + span{
+  color: #1d9af1;
+}
+
+.threeDots{
+  margin:0
+} 
+.threeDots svg{
+  margin: auto;
+}
+
+.name{
+  color:#000;
+  font-weight: bold;
+  font-size:1rem;
+  margin: 0 .2rem 0 0;
+  
+}
+.name:hover,.date:hover{
+  text-decoration: underline;
+}
+.twId{
+  font-size: .9rem;
+  margin: 0 .2rem 0 0;
+  cursor: pointer;
+}
+
+
+
+.profileInNewTweet {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0rem 0.8rem;
+  border: solid 1px #bbb;
+}
+
+
+
+/* TOP PROFILE */
+.topProfile li img {
+  border-radius: 50%;
+  width: 2rem !important;
+  border: 1px solid #5557;
+  align-self: center;
+}
+.topProfile li {
+  font-weight: bold;
+}
+
+.topProfile {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem 0.15rem 0.6rem;
+  top: 0;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 3.5rem;
+  border: 1.5px solid #eee9;
+  border-left: none;
+  background-color: #fefeff;
+  list-style: none;
+}
+.topNavbarIllusion {
+  height: 3.5rem;
+  box-sizing: border-box;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  background-color: #fefeff;
+  border-bottom: 1.5px solid #eff3f4;
+}
+.topProfile li:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.topProfile li:nth-child(1):hover {
+  background-color: #fefeff;
+}
+.topProfile li:nth-child(2) {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0.5rem;
+  align-self: center;
+  padding: 0.5rem;
+}
 
 @media screen and (min-width: 500px) {
+  .tweet:hover{
+    background-color: #F7F8F8;
+
+  }
   .middleSection {
     margin-top: 3.5rem;
     max-width: 600px;
+    width:85%
   }
-
-  
   .writeTweet {
     display: flex;
     flex-direction: row;
@@ -27,11 +240,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 6rem;
     padding-left: 0;
   }
+  .btnAndIcons ul li svg {
+    width: 1.2rem;
+    margin:auto
+  }
   .btnAndIcons ul li {
-    width: 1.3rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    display:flex;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .2s;
+  }
+  .btnAndIcons ul li:hover {
+    background-color: #1d9af130;
+    transition: background-color .2s;
   }
   .homeNavbar .writeTweet form {
     width: 100%;
@@ -40,9 +265,11 @@
     border: none;
     outline: none;
     font-size: 1.2rem;
-    font-family: Arial, sans-serif;
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-weight: 400;
     margin-top: 0.9rem;
     width: 95%;
+    resize: none;
   }
 
   .everyoneCanReply {
@@ -60,18 +287,10 @@
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 500;
   }
   .homeNavbar .writeTweet form textarea:focus ~ .everyoneCanReply {
     display: block !important;
-  }
-
-  .profileInNewTweet {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: 0rem 0.8rem;
-    border: solid 1px #bbb;
   }
 
   .tweetBtn {
@@ -84,21 +303,65 @@
     padding: 0.6rem 1rem;
     border-radius: 2rem;
     margin-right: 1rem;
+    cursor: pointer;
+    transition: background-color .4s;
+    
   }
   .tweetBtn:disabled {
     background-color: #1d9bf080;
+    transition: background-color .4s;
+  }
+  .tweetBtn:hover {
+    background-color: #1881cc;
+    transition: background-color .4s;
+  }
+
+
+  /* .personInformation{
+    display:none;
+    position:fixed;
+    background-color: #fff;
+    top:10rem
+  } */
+  /* .tweetTopSection:hover + .personInformation{
+    display: block;
+  } */
+
+  /* TOP PROFILE */
+  .topNavbarIllusion {
+    width: 88%;
+    max-width: 600px;
+  }
+  .topProfile {
+    flex-direction: row;
+    width: 88%;
+    max-width: 600px;
+  }
+  ul.topProfile li {
+    padding: inherit;
+  }
+  .topProfile li:nth-child(2) {
+    margin: 1rem;
   }
 }
-
+.btnAndIcons ul li.hideOnMediumAndLower{
+  display:none
+}
 @media screen and (min-width: 700px) {
   /* adding right section */
   .hideOnMedium {
     display: inline;
   }
+  .btnAndIcons ul li.hideOnMediumAndLower{
+    display:flex
+  }
+  
   .hideOnBig {
     display: none;
   }
   .btnAndIcons ul {
     width: 10rem;
   }
+  
+  
 }

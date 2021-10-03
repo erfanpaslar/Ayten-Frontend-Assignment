@@ -1,0 +1,209 @@
+.rightSide {
+  display: none;
+}
+.searchResult {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    width: calc(90% - 600px);
+    /* background-color: red; */
+    align-items: center;
+  }
+
+  .searchBox {
+    position: relative;
+    background-color: #eff2f5;
+    width: 85%;
+    margin: 0.5rem auto;
+    border-radius: 2rem;
+  }
+
+  .searchIcon svg {
+    width: 1.2rem;
+    fill: #707070;
+  }
+  .searchIcon {
+    position: absolute;
+    vertical-align: middle;
+    left: 1.2rem;
+    top: 55%;
+    transform: translateY(-50%);
+    margin: auto;
+    /* z-index: ; */
+  }
+  .searchBox input {
+    background-color: #eff2f5;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    padding: 0.775rem;
+    padding-left: 3.7rem;
+    border-radius: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+  }
+  .searchBox input:focus {
+    background-color: #fefffe;
+    transition: background-color 0.2s;
+    -webkit-box-shadow: inset 0px 0px 0px 1px #1c9af0;
+    -moz-box-shadow: inset 0px 0px 0px 1px #1c9af0;
+    box-shadow: inset 0px 0px 0px 1px #1c9af0;
+  }
+  .searchResult {
+    position: absolute;
+    background-color: #fefffe;
+    width: 100%;
+    /* right:5%; */
+    padding: 1.2rem 1rem;
+    padding-bottom: 3rem;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    color: #858585;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0rem 0px 11px 0.5px rgba(88, 88, 88, 0.203);
+  }
+  .searchBox input:focus ~ .searchResult,
+  .searchResult:hover {
+    display: block;
+  }
+  .searchBox input:focus ~ span svg {
+    fill: #1c9af0;
+  }
+
+  .whatsHappening {
+    background-color: #f6f8f9;
+    width: 85%;
+    border-radius: 1rem;
+    padding: 0.7rem 0 0;
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+  }
+  .whatsHappening .title {
+    display: block;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .whatsHappening a {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.2rem;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .whatsHappening a div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  .whatsHappening .showMore:hover,
+  .whatsHappening a:hover {
+    background-color: #f0f2f3;
+  }
+  .whatsHappening .category {
+    font-size: 0.8rem;
+    color: #686868;
+  }
+  .whatsHappening .innerTitle {
+    font-size: 1.03rem;
+    font-weight: 500;
+  }
+  .whatsHappening .happeningContent {
+    font-size: 0.95rem;
+    color: #686868;
+  }
+
+  .whatsHappening .sub {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    color: #686868;
+  }
+  .whatsHappening a img {
+    object-fit: cover;
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+
+  .whatsHappening .showMore {
+    display: block;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    color: #1c9bf1;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  .whoToFallow a {
+    padding: 1rem 0;
+  }
+  .whoToFallow a div {
+    margin-left: 0;
+    margin-right: auto;
+    width: 40%;
+    /* max-width: 4rem; */
+    overflow-x: hidden;
+  }
+  .whoToFallow a img {
+    object-fit: cover;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 0rem;
+    margin-left: 1.5rem;
+  }
+  .whoToFallow a input {
+    border: none;
+    outline: none;
+    color: #e7e7e7;
+    background-color: #000;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    width: 4.5rem;
+    height: 2rem;
+    border-radius: 3rem;
+    margin: auto 1rem;
+    cursor: pointer;
+  }
+  .whoToFallow a input:hover {
+    background-color: #000c;
+  }
+
+  .termOfUse {
+    align-self: flex-start;
+    margin-left: 3.5rem;
+  }
+  .termOfUse a,
+  .termOfUse span {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #677783;
+    text-decoration: none;
+    margin-right: 0.45rem;
+    font-weight: 500;
+  }
+  .termOfUse a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .rightSide {
+    width: calc(77.5% - 600px);
+  }
+}

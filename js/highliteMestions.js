@@ -1,4 +1,4 @@
-const tweets = document.getElementsByClassName("tweetContent")
+const tweets = document.getElementsByClassName("mention")
 for (tweet of tweets) {
   let text = tweet.innerHTML;
   text = text.replace(/([@#])([a-z\d_]+)/ig, function (_, marker, tag) {

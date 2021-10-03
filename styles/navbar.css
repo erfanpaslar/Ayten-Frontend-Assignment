@@ -51,13 +51,13 @@
   background-color: #1881cc;
 }
 
-.homeNavbar a{
-  text-decoration:none
+.homeNavbar a {
+  text-decoration: none;
 }
 .homeText {
   margin-left: 1.4rem;
   font-size: 1.2rem;
-  color:#000;
+  color: #000;
   font-weight: 500;
 }
 
@@ -160,10 +160,10 @@
 
 @media screen and (min-width: 1000px) {
   .leftNavbarIllusion {
-    width: 12%;
+    width: 10%;
   }
   .navbar {
-    width: 12%;
+    width: 10%;
   }
 }
 

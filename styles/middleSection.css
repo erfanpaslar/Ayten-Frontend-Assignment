@@ -1,60 +1,68 @@
-.tweet{
+.mainTweet {
+  border: solid 1px #eff3f4;
+  cursor: pointer;
+  background-color: #fffefe;
+  padding-top: 0.6rem;
+  /* padding-bottom: .5rem; */
+}
+.tweet {
   display: flex;
   flex-direction: row;
-  border: solid 1px #eff3f4;
-  padding-top:1rem;
-  padding-right:1rem;
-  cursor: pointer;
-
+  padding-right: 0.6rem;
 }
-.tweetIconsAndContent{
+
+.tweetIconsAndContent {
   display: flex;
   flex-direction: column;
 }
-.tweetIconsAndContent p{
-  margin-top:0rem
+.tweetIconsAndContent p {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
-.tweetTopSection{
+.tweetTopSection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color:#575757;
+  color: #575757;
   font-family: Arial, sans-serif;
   cursor: pointer;
 }
-.tweetTopSection div{
+.tweetTopSection div {
   margin: auto 0;
+  display: flex;
 }
-.dot:before{
+.dot:before {
   content: " \B7 ";
-
 }
-.tweetIcons{
+.tweetIcons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
-  padding-left:0;
-  margin-right:3rem
+  padding-left: 0;
+  margin-right: 3rem;
+  margin-bottom: 0.5rem;
 }
-.tweetIcons li{
+.tweetIcons li {
   display: flex;
 }
-.tweetIcons li svg{
-  width:1.2rem;
-  vertical-align:text-bottom;
-  fill:#575757;
+.tweetIcons li svg {
+  width: 1.2rem;
+  vertical-align: text-bottom;
+  fill: #575757;
 }
-.tweetIcons li span{
+.tweetIcons li span {
   display: inline;
-  margin:auto;
-  margin-left:.4rem
+  margin: auto;
+  margin-left: 0.2rem;
+  color: #575757;
+  font-size: 0.9rem;
 }
 
-.threeDots{
-  display:flex;
-  width:2rem;
-  height:2rem;
+.threeDots {
+  display: flex;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
 }
 
@@ -62,92 +70,102 @@
 .tweetRetweetSvg,
 .tweetLikeSvg,
 .tweetShareSvg,
-.threeDotsSvg{
-  fill:#536471;
-  padding:.3rem;
-  border-radius:50%;
-  transition: fill .2s;
-  transition: background-color .2s;
+.threeDotsSvg {
+  fill: #536471;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: fill 0.2s;
+  transition: background-color 0.2s;
 }
 
-.threeDotsSvg{
-  fill:#000;
+.threeDotsSvg {
+  fill: #536471;
 }
 
 .tweetCommentsSvg:hover,
 .tweetRetweetSvg:hover,
 .tweetLikeSvg:hover,
 .tweetShareSvg:hover,
-.threeDotsSvg:hover{
-  transition: fill .2s;
-  transition: background-color .2s;
+.threeDotsSvg:hover {
+  transition: fill 0.2s;
+  transition: background-color 0.2s;
 }
 
-.tweetRetweetSvg:hover{
+.tweetRetweetSvg:hover {
   fill: #29db4f;
-  
 }
-.tweetLikeSvg:hover{
+.tweetLikeSvg:hover {
   fill: #f91880;
-
 }
 
 .tweetCommentsSvg:hover,
 .tweetShareSvg:hover,
-.threeDotsSvg:hover{
+.threeDotsSvg:hover {
   fill: #1d9af1;
 }
 
-
-.tweetRetweetSvg:hover{
-  background-color: #29db4f40;
+.tweetRetweetSvg:hover {
+  background-color: #29db4f25;
 }
-.tweetRetweetSvg:hover + span{
+.tweetRetweetSvg:hover + span {
   color: #29db4f;
 }
-.tweetLikeSvg:hover{
-  background-color: #f9188040;
+.tweetLikeSvg:hover {
+  background-color: #f9188030;
 }
-.tweetLikeSvg:hover + span{
+.tweetLikeSvg:hover + span {
   color: #f91880;
 }
 
-
 .tweetCommentsSvg:hover,
 .tweetShareSvg:hover,
-.threeDotsSvg:hover{
-  background-color: #1d9af140;
+.threeDotsSvg:hover {
+  background-color: #1d9af135;
 }
 .tweetCommentsSvg:hover + span,
 .tweetShareSvg:hover + span,
-.threeDotsSvg:hover + span{
+.threeDotsSvg:hover + span {
   color: #1d9af1;
 }
 
-.threeDots{
-  margin:0
-} 
-.threeDots svg{
+.threeDots {
+  margin: 0;
+}
+.threeDots svg {
   margin: auto;
 }
 
-.name{
-  color:#000;
+.name {
+  color: #000;
   font-weight: bold;
-  font-size:1rem;
-  margin: 0 .2rem 0 0;
-  
+  font-size: 1rem;
+  margin: 0 0.3rem 0 0;
 }
-.name:hover,.date:hover{
+.name:hover,
+.date:hover {
   text-decoration: underline;
 }
-.twId{
-  font-size: .9rem;
-  margin: 0 .2rem 0 0;
+.date {
+  font-size: 0.98rem;
+}
+.twId {
+  font-size: 0.9rem;
+  margin: 0 0.2rem 0 0;
   cursor: pointer;
 }
 
+.verified {
+  width: 1.1rem;
+  margin-right: 0.3rem;
+}
 
+.mentionAndHashtag {
+  text-decoration: none;
+  color: #1c9af0;
+}
+.mentionAndHashtag:hover {
+  text-decoration: underline;
+}
 
 .profileInNewTweet {
   width: 3rem;
@@ -157,7 +175,12 @@
   border: solid 1px #bbb;
 }
 
-
+.tweetContent img {
+  border-radius: 1rem;
+  display: block;
+  margin-top: 1rem;
+  max-width: 90%;
+}
 
 /* TOP PROFILE */
 .topProfile li img {
@@ -180,14 +203,14 @@
   margin: 0;
   position: fixed;
   width: 100%;
-  height: 3.5rem;
-  border: 1.5px solid #eee9;
+  height: 3.2rem;
+  border: 1px solid #eee9;
   border-left: none;
   background-color: #fefeff;
   list-style: none;
 }
 .topNavbarIllusion {
-  height: 3.5rem;
+  height: 3.2rem;
   box-sizing: border-box;
   top: 0;
   position: fixed;
@@ -206,20 +229,108 @@
 .topProfile li:nth-child(2) {
   width: 1.3rem;
   height: 1.3rem;
-  margin: 0.5rem;
+  margin-right: 0.75rem;
   align-self: center;
   padding: 0.5rem;
+  transition: background-color 0.2s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.topProfile li:nth-child(2):hover {
+  background-color: #ddda;
+  transition: background-color 0.2s;
 }
 
-@media screen and (min-width: 500px) {
-  .tweet:hover{
-    background-color: #F7F8F8;
+.mainTweet *.verified,
+.mainTweet .someoneRetweeted,
+.mainTweet .retweetedBy,
+.mainTweet .showTread,
+.mainTweet .leftOfTweet span,
+.mainTweet .smallerProfile {
+  display: none;
+}
+.retweeted .leftOfTweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.retweeted .leftOfTweet span {
+  display: inline;
+  border-right: 2px solid #ced9df;
+  height: 100%;
+  width: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.retweeted .smallerProfile {
+  display: inline;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.retweeted .someoneRetweeted,
+.retweeted .retweetedBy {
+  display: flex;
+}
+.retweeted .showTread {
+  display: inline;
+}
+
+.retweetedBy {
+  margin-left: 3rem;
+  color: #667683;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  margin-top: 0rem;
+}
+.retweetedBy span:hover {
+  text-decoration: underline;
+}
+
+.retweetedBy svg {
+  width: 1rem;
+  fill: #667683;
+  margin-right: 0.4rem;
+}
+.verifiedUser *.verified {
+  display: inline;
+}
+
+.showTread {
+  margin-top: 0.4rem;
+  /* margin-bottom: .5rem; */
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.showTread a {
+  text-decoration: none;
+  color: #1c9af0;
+}
+.showTread a:hover {
+  text-decoration: underline;
+}
+/* .showTread:hover{
+  background-color:red
+} */
+
+@media screen and (min-width: 500px) {
+  /* .homeText {
+    margin-left: 1.4rem;
+    font-size: 1rem;
+    color:#000;
+  } */
+  .mainTweet:hover {
+    background-color: #f7f8f8;
   }
   .middleSection {
-    margin-top: 3.5rem;
+    margin-top: 3.2rem;
     max-width: 600px;
-    width:85%
+    width: 85%;
   }
   .writeTweet {
     display: flex;
@@ -244,19 +355,19 @@
   }
   .btnAndIcons ul li svg {
     width: 1.2rem;
-    margin:auto
+    margin: auto;
   }
   .btnAndIcons ul li {
     width: 2.1rem;
     height: 2.1rem;
-    display:flex;
+    display: flex;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
   }
   .btnAndIcons ul li:hover {
     background-color: #1d9af130;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
   }
   .homeNavbar .writeTweet form {
     width: 100%;
@@ -265,11 +376,12 @@
     border: none;
     outline: none;
     font-size: 1.2rem;
-    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    font-family: "IBM Plex Sans", Arial, sans-serif;
     font-weight: 400;
     margin-top: 0.9rem;
     width: 95%;
     resize: none;
+    height: 2rem;
   }
 
   .everyoneCanReply {
@@ -304,18 +416,16 @@
     border-radius: 2rem;
     margin-right: 1rem;
     cursor: pointer;
-    transition: background-color .4s;
-    
+    transition: background-color 0.4s;
   }
   .tweetBtn:disabled {
     background-color: #1d9bf080;
-    transition: background-color .4s;
+    transition: background-color 0.4s;
   }
   .tweetBtn:hover {
     background-color: #1881cc;
-    transition: background-color .4s;
+    transition: background-color 0.4s;
   }
-
 
   /* .personInformation{
     display:none;
@@ -339,29 +449,31 @@
   }
   ul.topProfile li {
     padding: inherit;
-  }
-  .topProfile li:nth-child(2) {
-    margin: 1rem;
+    padding-top: 0;
+    font-weight: 500;
   }
 }
-.btnAndIcons ul li.hideOnMediumAndLower{
-  display:none
+.btnAndIcons ul li.hideOnMediumAndLower {
+  display: none;
 }
 @media screen and (min-width: 700px) {
   /* adding right section */
   .hideOnMedium {
     display: inline;
   }
-  .btnAndIcons ul li.hideOnMediumAndLower{
-    display:flex
+  .btnAndIcons ul li.hideOnMediumAndLower {
+    display: flex;
   }
-  
+
   .hideOnBig {
     display: none;
   }
   .btnAndIcons ul {
     width: 10rem;
   }
-  
-  
+}
+@media screen and (min-width: 750px) {
+  .topProfile li:nth-child(2) {
+    margin-right: 0;
+  }
 }

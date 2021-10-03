@@ -9,8 +9,8 @@
   z-index: 2;
   overflow-y: scroll;
 }
-.navbar::-webkit-scrollbar{
-  width:0
+.navbar::-webkit-scrollbar {
+  width: 0;
 }
 .navbar ul {
   display: flex;
@@ -21,13 +21,12 @@
   padding: 0.3rem 0;
   margin: 0;
 }
-.navbar ul li svg{
+.navbar ul li svg {
   width: 1.7rem;
   height: 1.7rem;
   vertical-align: top;
 }
 .navbar ul li {
-  
   padding: 0.4rem;
   border-radius: 100%;
   transition: background-color 0.2s;
@@ -52,9 +51,14 @@
   background-color: #1881cc;
 }
 
+.homeNavbar a{
+  text-decoration:none
+}
 .homeText {
   margin-left: 1.4rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color:#000;
+  font-weight: 500;
 }
 
 .navbar ul .hideOnSmall,
@@ -68,12 +72,17 @@
   display: flex;
   flex-direction: row;
 }
-.justOnBiggest{
-  display:none
+.justOnBiggest {
+  display: none;
+}
+
+.navbar a {
+  color: #575757;
+  text-decoration: none;
 }
 @media screen and (min-width: 500px) {
-  .justOnSmall{
-    display:none
+  .justOnSmall {
+    display: none;
   }
   .navbar ul .hideOnSmall,
   .hideOnSmall {
@@ -91,13 +100,12 @@
     height: 100vh;
     min-width: 4.5rem;
     width: 15%;
-    
   }
   .navbar {
     width: 15%;
     height: 100%;
     min-width: 4.5rem;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     box-sizing: border-box;
   }
   .navbar ul {
@@ -108,7 +116,6 @@
     align-items: end;
     padding: 0.3rem 0;
   }
-  
 
   .navbar ul li img {
     width: 1.5rem;
@@ -128,9 +135,8 @@
   .navbar ul .twitterNavIcon:hover {
     background-color: #1d9af140;
   }
-  .twitterNavIcon{
-    margin-top:.1rem
-
+  .twitterNavIcon {
+    margin-top: 0.1rem;
   }
 
   .navbar ul .writeTweet {
@@ -140,14 +146,12 @@
     width: 1.5rem;
     height: 1.5rem;
   }
-  
 }
 
 @media screen and (min-width: 700px) {
   /* adding right section */
   .leftNavbarIllusion {
     width: 18%;
-    
   }
   .navbar {
     width: 18%;
@@ -163,10 +167,9 @@
   }
 }
 
-
 @media screen and (min-width: 1280px) {
-  .hideOnBiggest{
-    display:none
+  .hideOnBiggest {
+    display: none;
   }
   .leftNavbarIllusion {
     width: 22.5%;
@@ -174,85 +177,82 @@
   .navbar {
     width: 22.5%;
   }
-  .justOnBiggest{
-    display:inline
+  .justOnBiggest {
+    display: inline;
   }
-  .navbar ul  {
+  .navbar ul {
     align-items: flex-start;
     padding-left: 3rem;
   }
   .navbar ul li {
     border-radius: 2rem;
-    
   }
-  
-
 
   .navbar ul li span {
     font-size: 1.2rem;
-    margin:auto 1rem;
-    
+    margin: auto 1.2rem;
+    font-weight: 400;
   }
 
   .navbar ul li.writeTweet span {
-    margin:auto;
-  }
-  .navbar ul li.writeTweet{
-    color:#fff;
-    width:70%;
-    text-align: center;
     font-weight: 500;
-    height:auto;
+    color: #fff;
+    text-align: center;
+  }
+  .navbar ul li.writeTweet a {
+    margin: auto;
+  }
+  .navbar ul li.writeTweet {
+    width: 80%;
+    height: auto;
   }
 
-  .navbar ul li.profile:hover{
-    background-color: #ddda!important;
+  .navbar ul li.profile:hover {
+    background-color: #ddda !important;
   }
-  .navbar ul li.profile{
-    display:flex;
+  .navbar ul li.profile {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top:2rem!important;
-    padding-left:1.5rem;
-
+    margin-top: 2rem !important;
+    padding-left: 1.5rem;
   }
   .navbar ul li img {
     margin: auto;
   }
 
-  .navbar ul li.profile span{
-    display:flex;
+  .navbar ul li.profile span {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .navbar ul li span .nameAndId{
+  .navbar ul li span .nameAndId {
     display: flex;
-    flex-direction:column;
-    font-size:.9rem;
-    margin:auto;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin: auto;
   }
-  .navbar ul li span .nameAndId .name{
-    color:#000;
+  .navbar ul li span .nameAndId .name {
+    color: #000;
     font-weight: bold;
-    font-size:1rem;
+    font-size: 1rem;
     margin: 0 1rem 0 0;
   }
-  .navbar ul li span .nameAndId .name:hover{
-    text-decoration: none
+  .navbar ul li span .nameAndId .name:hover {
+    text-decoration: none;
   }
-  .navbar ul li span .nameAndId .twId{
-    font-size: .9rem;
+  .navbar ul li span .nameAndId .twId {
+    font-size: 0.9rem;
     margin: 0 1rem 0 0;
-    color:#575757
+    color: #575757;
   }
 
-  .navbar ul li span .dots{
+  .navbar ul li span .dots {
     font-weight: 500;
-    color:#000;
-    margin:0!important;
+    color: #000;
+    margin: 0 !important;
     align-self: start;
     vertical-align: middle;
   }
-  
 }

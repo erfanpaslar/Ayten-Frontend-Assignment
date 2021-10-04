@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500&display=swap");
 :root {
-  --littleIconsColor: #1d9bf0;
+  --littleIconsColor: #1c9af0;
   --blueBtnsColor:#1D9AF1;
   --borderColor:#eff3f4;
+  --bg:#FEFEFF;
+  --hoverBg:#f7f8f8;
+  --hoverNavBg:#ddda;
+  --mentionsColor:#1c9bf1;
+  --hoverBlue:#1881CC;
+  --noColor:#0000;
+  --retweetingColor:#29db4f;
+  --likeColor:#f91880;
+  --rightSectionBg:#f6f8f9;
+  --rightSectionHover:#f0f2f3;
+  --grayIconsColor:#536471;
+  --grayText:#575757;
+
 }
 * {
   -webkit-tap-highlight-color: transparent;
@@ -10,7 +23,8 @@
 body {
   margin: 0;
   font-family: "IBM Plex Sans", Arial, sans-serif;
-  background-color: #fefffe;
+  background-color: var(--bg);
+  padding-bottom: 4.5rem;
 }
 .hide{
   display:none!important;

@@ -1,18 +1,24 @@
 .mainTweet {
+  position: relative;
   border: solid 1px var(--borderColor);
   cursor: pointer;
-  background-color: #fffefe;
+  background-color: var(--bg);
   padding-top: 0.6rem;
+  padding-right: 1rem;
+}
+.mainTweet:hover {
+  background-color: #f7f8f8;
 }
 .tweet {
+  position: relative;
   display: flex;
   flex-direction: row;
-  padding-right: 1rem;
 }
 
 .tweetIconsAndContent {
   display: flex;
   flex-direction: column;
+  max-width:calc(100% - 76px);
 }
 .tweetIconsAndContent p {
   margin-top: 0rem;
@@ -22,7 +28,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #575757;
+  color: var(--grayText);
   font-family: Arial, sans-serif;
   cursor: pointer;
 }
@@ -39,23 +45,22 @@
   justify-content: space-between;
   list-style: none;
   padding-left: 0;
-  margin-right: 3rem;
+  margin-right: 2rem;
   margin-bottom: 0.5rem;
 }
 .tweetIcons li {
   display: flex;
-  width: 5rem;
 }
 .tweetIcons li svg {
   width: 1.2rem;
   vertical-align: text-bottom;
-  fill: #575757;
+  fill: var(--grayText);
 }
 .tweetIcons li span {
   display: inline;
   margin: auto;
   margin-left: 0.2rem;
-  color: #575757;
+  color: var(--grayText);
   font-size: 0.9rem;
 }
 
@@ -71,7 +76,7 @@
 .tweetLikeSvg,
 .tweetShareSvg,
 .threeDotsSvg {
-  fill: #536471;
+  fill: var(--grayIconsColor);
   padding: 0.5rem;
   border-radius: 50%;
   transition: fill 0.2s;
@@ -79,7 +84,7 @@
 }
 
 .threeDotsSvg {
-  fill: #536471;
+  fill: var(--grayIconsColor)
 }
 
 .tweetCommentsSvg:hover,
@@ -92,10 +97,10 @@
 }
 
 .tweetRetweetSvg:hover {
-  fill: #29db4f;
+  fill: var(--retweetingColor);
 }
 .tweetLikeSvg:hover {
-  fill: #f91880;
+  fill: var(--likeColor);
 }
 
 .tweetCommentsSvg:hover,
@@ -108,13 +113,13 @@
   background-color: #29db4f25;
 }
 .tweetRetweetSvg:hover + span {
-  color: #29db4f;
+  color: var(--retweetingColor);
 }
 .tweetLikeSvg:hover {
   background-color: #f9188030;
 }
 .tweetLikeSvg:hover + span {
-  color: #f91880;
+  color: var(--likeColor);
 }
 
 .tweetCommentsSvg:hover,
@@ -162,7 +167,7 @@
 
 .mentionAndHashtag {
   text-decoration: none;
-  color: #1c9bf1;
+  color: var(--mentionsColor);
 }
 .mentionAndHashtag:hover {
   text-decoration: underline;
@@ -213,7 +218,7 @@
   height: 3.2rem;
   border: 1px solid #eee9;
   border-left: none;
-  background-color: #fefeff;
+  background-color: var(--bg);
   list-style: none;
   z-index: 2;
 }
@@ -221,10 +226,9 @@
   height: 3.2rem;
   box-sizing: border-box;
   top: 0;
-  /* position: fixed; */
   z-index: 0;
   width: 100%;
-  background-color: #fefeff;
+  background-color: var(--bg);
   border-bottom: 1px solid var(--borderColor);
 }
 .topProfile li:nth-child(1) {
@@ -232,7 +236,7 @@
   align-items: center;
 }
 .topProfile li:nth-child(1):hover {
-  background-color: #fefeff;
+  background-color: var(--bg);
 }
 .topProfile li:nth-child(2) {
   width: 1.3rem;
@@ -245,7 +249,7 @@
   cursor: pointer;
 }
 .topProfile li:nth-child(2):hover {
-  background-color: #ddda;
+  background-color: var(--hoverNavBg);
   transition: background-color 0.2s;
 }
 
@@ -300,7 +304,7 @@
 
 .retweetedBy svg {
   width: 1rem;
-  fill: #667683;
+  fill: var(--grayIconsColor);
   margin-right: 0.4rem;
 }
 .verifiedUser *.verified {
@@ -309,7 +313,6 @@
 
 .showTread {
   margin-top: 0.4rem;
-  /* margin-bottom: .5rem; */
   width: 100%;
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
@@ -317,14 +320,11 @@
 
 .showTread a {
   text-decoration: none;
-  color: #1c9af0;
+  color: var(--littleIconsColor);
 }
 .showTread a:hover {
   text-decoration: underline;
 }
-/* .showTread:hover{
-  background-color:red
-} */
 
 .personInformation {
   display:none!important;
@@ -335,14 +335,7 @@
   font-weight: 600;
 }
 @media screen and (min-width: 500px) {
-  /* .homeText {
-    margin-left: 1.4rem;
-    font-size: 1rem;
-    color:#000;
-  } */
-  .mainTweet:hover {
-    background-color: #f7f8f8;
-  }
+  
   .middleSection {
     margin-top: 3.2rem;
     max-width: 600px;
@@ -426,8 +419,8 @@
     border: none;
     font-size: 0.9rem;
     font-weight: bold;
-    background-color: #1d9bf0;
-    color: #fff;
+    background-color: var(--blueBtnsColor);
+    color: white;
     padding: 0.6rem 1rem;
     border-radius: 2rem;
     margin-right: 1rem;
@@ -439,7 +432,7 @@
     transition: background-color 0.4s;
   }
   .tweetBtn:enabled:hover {
-    background-color: #1881cc;
+    background-color: var(--hoverBlue);
     transition: background-color 0.4s;
   }
 
@@ -463,7 +456,6 @@
   display: none;
 }
 @media screen and (min-width: 700px) {
-  /* adding right section */
   .hideOnMedium {
     display: inline;
   }
@@ -486,7 +478,7 @@
   .tweetTopSection .personInformation{
     position: absolute;
     display:none;
-    background-color: #fefeff;
+    background-color: var(--bg);
     width:17rem;
     height:13rem;
     top:2rem;
@@ -512,10 +504,10 @@
   .personInformation input{
     outline: none;
     border:none;
-    background-color: #000;
+    background-color: black;
     font-size:1rem;
     font-weight: bold;
-    color:#fff;
+    color:white;
     height:2rem;
     width:6em;
     border-radius:1rem;
@@ -524,6 +516,7 @@
     cursor:pointer;
     transition: background-color 0.2
   }
+  .personInformation input:focus,
   .personInformation input:hover{
     background-color: #000d;
     transition: background-color 0.2
@@ -541,13 +534,11 @@
   }
 
 
-  /* .leftOfTweet .profileInNewTweet:hover ~ .tweetIconsAndContent .tweetTopSection .personInformation, */
   .tweetTopSection:hover .personInformation{
     display: flex!important;
     animation-name: displayInfo;
     animation-duration: .75s;
     animation-fill-mode:forwards;
-    /* animation-delay: 2s; */
   }
   
   @keyframes displayInfo {

@@ -1,6 +1,5 @@
 .rightSide {
   display: none;
-  transition: width .2s;
   max-width: 412px;
 }
 .searchResult {
@@ -20,13 +19,13 @@
     width: calc(90% - 600px);
     max-width: calc(70% - 412px);
     height:3.2rem;
-    background-color:#fefffe;
+    background-color:var(--bg);
     z-index: 2;
   }
   .searchBox {
     position: fixed;
     top:0;
-    background-color: #eff2f5;
+    background-color: var(--bg);
     width: calc(85% - 600px);
     max-width: calc(70% - 412px);
     margin: 0.2rem auto;
@@ -36,11 +35,11 @@
 
   .searchIcon svg {
     width: 1.2rem;
-    fill: #707070;
+    fill: var(--grayIconsColor);
   }
   .clearIcon svg{
     width: .7rem;
-    fill: #fff!important;
+    fill: white!important;
   }
   .clearIcon {
     display: none;
@@ -55,12 +54,12 @@
     height:1.4rem;
     transform: translateY(-50%);
     margin: auto;
-    background-color: #1c9af0;
+    background-color: var(--littleIconsColor);
     transition: background-color 0.2s;
     cursor: pointer;
   }
   .clearIcon:hover{
-    background-color: #1881CC;
+    background-color: var(--hoverBlue);
     transition: background-color 0.2s;
   }
   .searchIcon {
@@ -72,12 +71,13 @@
     margin: auto;
   }
   .searchBox input {
-    background-color: #eff2f5;
+    background-color: #EFF3F4;
     border: none;
     outline: none;
     font-size: 0.95rem;
     font-family: "IBM Plex Sans", Arial, sans-serif;
-    padding: 0.75rem;
+    padding: 0.7rem;
+    margin: .1rem;
     padding-left: 3.7rem;
     border-radius: 2rem;
     width: 100%;
@@ -85,23 +85,22 @@
     transition: background-color 0.2s;
   }
   .searchBox input:focus {
-    background-color: #fefffe;
+    background-color: var(--bg);
     transition: background-color 0.2s;
-    -webkit-box-shadow: inset 0px 0px 0px 1px #1c9af0;
-    -moz-box-shadow: inset 0px 0px 0px 1px #1c9af0;
-    box-shadow: inset 0px 0px 0px 1px #1c9af0;
+    -webkit-box-shadow: inset 0px 0px 0px 1px var(--littleIconsColor);
+    -moz-box-shadow: inset 0px 0px 0px 1px var(--littleIconsColor);
+    box-shadow: inset 0px 0px 0px 1px var(--littleIconsColor);
   }
   .searchResult {
     position: absolute;
-    background-color: #fefffe;
+    background-color: var(--bg);
     width: 100%;
-    /* right:5%; */
     padding: 1.2rem 1rem;
     padding-bottom: 3rem;
     font-size: 0.92rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
-    color: #858585;
+    color: #8d8d8d;
     text-align: center;
     font-weight: 500;
     box-shadow: 0rem 0px 11px 0.5px rgba(88, 88, 88, 0.203);
@@ -111,12 +110,11 @@
     display: block;
   }
   .searchBox input:focus ~ span.searchIcon svg {
-    fill: #1c9af0!important;
+    fill: var(--littleIconsColor)!important;
   }
 
   .whatsHappening {
-    background-color: #f6f8f9;
-    /* width: 85%; */
+    background-color: var(--rightSectionBg);
     border-radius: 1rem;
     padding: 0.7rem 0 0;
     margin-bottom: 1rem;
@@ -145,11 +143,11 @@
   }
   .whatsHappening .showMore:hover,
   .whatsHappening a:hover {
-    background-color: #f0f2f3;
+    background-color: var(--rightSectionHover);
   }
   .whatsHappening .category {
     font-size: 0.8rem;
-    color: #686868;
+    color: var(--grayText);
   }
   .whatsHappening .innerTitle {
     font-size: 1.03rem;
@@ -157,13 +155,13 @@
   }
   .whatsHappening .happeningContent {
     font-size: 0.95rem;
-    color: #686868;
+    color: var(--grayText);
   }
 
   .whatsHappening .sub {
     margin-top: 0.2rem;
     font-size: 0.8rem;
-    color: #686868;
+    color: var(--grayText);
   }
   .whatsHappening a img {
     object-fit: cover;
@@ -180,7 +178,7 @@
     padding-top: 1rem;
     padding-left: 1rem;
     border-radius: 0 0 1rem 1rem;
-    color: #1c9bf1;
+    color: var(--mentionsColor);
     text-decoration: none;
     box-sizing: border-box;
   }
@@ -204,7 +202,6 @@
     margin-left: 0;
     margin-right: auto;
     width: 40%;
-    /* max-width: 4rem; */
     overflow-x: hidden;
   }
   .whoToFallow a img {
@@ -220,7 +217,7 @@
     border: none;
     outline: none;
     color: #e7e7e7;
-    background-color: #000;
+    background-color: black;
     font-size: 0.9rem;
     font-family: Arial, sans-serif;
     font-weight: 600;
@@ -236,16 +233,17 @@
 
   .termOfUse {
     align-self: flex-start;
-    margin-left: 3.5rem;
+    margin-left: 1rem;
   }
   .termOfUse a,
   .termOfUse span {
     font-family: Arial, sans-serif;
     font-size: 0.8rem;
-    color: #677783;
+    color: var(--grayIconsColor);
     text-decoration: none;
     margin-right: 0.45rem;
     font-weight: 500;
+    align-self: flex-start;
   }
   .termOfUse a:hover {
     text-decoration: underline;

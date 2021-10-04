@@ -1,29 +1,67 @@
 .rightSide {
   display: none;
+  transition: width .2s;
+  max-width: 412px;
 }
 .searchResult {
   display: none;
 }
 @media screen and (min-width: 1000px) {
   .rightSide {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: calc(90% - 600px);
-    /* background-color: red; */
     align-items: center;
+    
   }
-
+  .searchIllusion{
+    position: fixed;
+    width: calc(90% - 600px);
+    max-width: calc(70% - 412px);
+    height:3.2rem;
+    background-color:#fefffe;
+    z-index: 2;
+  }
   .searchBox {
-    position: relative;
+    position: fixed;
+    top:0;
     background-color: #eff2f5;
-    width: 85%;
-    margin: 0.5rem auto;
+    width: calc(85% - 600px);
+    max-width: calc(70% - 412px);
+    margin: 0.2rem auto;
     border-radius: 2rem;
+    z-index: 2;
   }
 
   .searchIcon svg {
     width: 1.2rem;
     fill: #707070;
+  }
+  .clearIcon svg{
+    width: .7rem;
+    fill: #fff!important;
+  }
+  .clearIcon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    vertical-align: middle;
+    right: 1rem;
+    top: 50%;
+    border-radius:50%;
+    width:1.4rem;
+    height:1.4rem;
+    transform: translateY(-50%);
+    margin: auto;
+    background-color: #1c9af0;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  .clearIcon:hover{
+    background-color: #1881CC;
+    transition: background-color 0.2s;
   }
   .searchIcon {
     position: absolute;
@@ -32,7 +70,6 @@
     top: 55%;
     transform: translateY(-50%);
     margin: auto;
-    /* z-index: ; */
   }
   .searchBox input {
     background-color: #eff2f5;
@@ -40,7 +77,7 @@
     outline: none;
     font-size: 0.95rem;
     font-family: "IBM Plex Sans", Arial, sans-serif;
-    padding: 0.775rem;
+    padding: 0.75rem;
     padding-left: 3.7rem;
     border-radius: 2rem;
     width: 100%;
@@ -73,17 +110,17 @@
   .searchResult:hover {
     display: block;
   }
-  .searchBox input:focus ~ span svg {
-    fill: #1c9af0;
+  .searchBox input:focus ~ span.searchIcon svg {
+    fill: #1c9af0!important;
   }
 
   .whatsHappening {
     background-color: #f6f8f9;
-    width: 85%;
+    /* width: 85%; */
     border-radius: 1rem;
     padding: 0.7rem 0 0;
     margin-bottom: 1rem;
-    margin-top: 0.2rem;
+    margin-top: 4rem;
   }
   .whatsHappening .title {
     display: block;
@@ -147,8 +184,21 @@
     text-decoration: none;
     box-sizing: border-box;
   }
+  .whoToFallow {
+    margin-top: .5rem;
+    width:100%;
+  }
+  .sticky{
+    position:sticky;
+    top: -30rem;
+    width:85%;
+    z-index: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   .whoToFallow a {
-    padding: 1rem 0;
+    padding: .5rem 0;
   }
   .whoToFallow a div {
     margin-left: 0;
@@ -202,8 +252,28 @@
   }
 }
 
+@media screen and (min-width: 1150px) {
+  .rightSide {
+    width: calc(86% - 600px);
+  }
+  .searchIllusion{
+    width: 360px;
+    max-width: 360px;
+  }
+  .searchBox {
+    width: 350px;
+    max-width: 400px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .rightSide {
     width: calc(77.5% - 600px);
+  }
+  .searchIllusion{
+    width: 400px;
+  }
+  .searchBox {
+    width: 350px;
+
   }
 }

@@ -1,14 +1,13 @@
 .mainTweet {
-  border: solid 1px #eff3f4;
+  border: solid 1px var(--borderColor);
   cursor: pointer;
   background-color: #fffefe;
   padding-top: 0.6rem;
-  /* padding-bottom: .5rem; */
 }
 .tweet {
   display: flex;
   flex-direction: row;
-  padding-right: 0.6rem;
+  padding-right: 1rem;
 }
 
 .tweetIconsAndContent {
@@ -45,6 +44,7 @@
 }
 .tweetIcons li {
   display: flex;
+  width: 5rem;
 }
 .tweetIcons li svg {
   width: 1.2rem;
@@ -101,7 +101,7 @@
 .tweetCommentsSvg:hover,
 .tweetShareSvg:hover,
 .threeDotsSvg:hover {
-  fill: #1d9af1;
+  fill: var(--blueBtnsColor);
 }
 
 .tweetRetweetSvg:hover {
@@ -125,7 +125,7 @@
 .tweetCommentsSvg:hover + span,
 .tweetShareSvg:hover + span,
 .threeDotsSvg:hover + span {
-  color: #1d9af1;
+  color: var(--blueBtnsColor);
 }
 
 .threeDots {
@@ -140,6 +140,7 @@
   font-weight: bold;
   font-size: 1rem;
   margin: 0 0.3rem 0 0;
+  cursor: pointer;
 }
 .name:hover,
 .date:hover {
@@ -172,14 +173,20 @@
   height: 3rem;
   border-radius: 50%;
   margin: 0rem 0.8rem;
-  border: solid 1px #bbb;
+  border: solid 1px #0000000a;
+  cursor:pointer;
+  transition:filter .2s
+}
+.profileInNewTweet:hover{
+  filter:brightness(90%);
+  transition:filter .2s
 }
 
 .tweetContent img {
   border-radius: 1rem;
   display: block;
   margin-top: 1rem;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 /* TOP PROFILE */
@@ -208,16 +215,17 @@
   border-left: none;
   background-color: #fefeff;
   list-style: none;
+  z-index: 2;
 }
 .topNavbarIllusion {
   height: 3.2rem;
   box-sizing: border-box;
   top: 0;
-  position: fixed;
+  /* position: fixed; */
   z-index: 0;
   width: 100%;
   background-color: #fefeff;
-  border-bottom: 1.5px solid #eff3f4;
+  border-bottom: 1px solid var(--borderColor);
 }
 .topProfile li:nth-child(1) {
   display: flex;
@@ -318,6 +326,14 @@
   background-color:red
 } */
 
+.personInformation {
+  display:none!important;
+}
+.homeText {
+  font-size: 1.2rem;
+  margin-left: .5rem;
+  font-weight: 600;
+}
 @media screen and (min-width: 500px) {
   /* .homeText {
     margin-left: 1.4rem;
@@ -337,7 +353,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0.5rem;
-    border: solid 1px #eff3f4;
+    border: solid 1px var(--borderColor);
     border-top: 0;
   }
   .btnAndIcons {
@@ -395,7 +411,7 @@
   .homeNavbar .writeTweet form .everyoneCanReply {
     color: var(--littleIconsColor);
     vertical-align: middle;
-    border-bottom: solid 1px #eff3f4;
+    border-bottom: solid 1px var(--borderColor);
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
     font-size: 0.9rem;
@@ -422,20 +438,10 @@
     background-color: #1d9bf080;
     transition: background-color 0.4s;
   }
-  .tweetBtn:hover {
+  .tweetBtn:enabled:hover {
     background-color: #1881cc;
     transition: background-color 0.4s;
   }
-
-  /* .personInformation{
-    display:none;
-    position:fixed;
-    background-color: #fff;
-    top:10rem
-  } */
-  /* .tweetTopSection:hover + .personInformation{
-    display: block;
-  } */
 
   /* TOP PROFILE */
   .topNavbarIllusion {
@@ -471,6 +477,94 @@
   .btnAndIcons ul {
     width: 10rem;
   }
+
+
+  .tweetTopSection{
+    position: relative;
+  }
+
+  .tweetTopSection .personInformation{
+    position: absolute;
+    display:none;
+    background-color: #fefeff;
+    width:17rem;
+    height:13rem;
+    top:2rem;
+    flex-direction: column;
+    box-shadow: 0rem 0px 11px 0.5px rgba(88, 88, 88, 0.203);
+    border-radius: 1.5rem;
+    cursor: default;
+    padding:1rem;
+    z-index: 3;
+  }
+
+  .personInformation .profileAndFallowBtn{
+    justify-content:space-between;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .profileAndFallowBtn img{
+    width:4rem;
+    height:4rem;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .personInformation input{
+    outline: none;
+    border:none;
+    background-color: #000;
+    font-size:1rem;
+    font-weight: bold;
+    color:#fff;
+    height:2rem;
+    width:6em;
+    border-radius:1rem;
+    margin-right:.5rem;
+    margin-top:.5rem;
+    cursor:pointer;
+    transition: background-color 0.2
+  }
+  .personInformation input:hover{
+    background-color: #000d;
+    transition: background-color 0.2
+  }
+  .personInformation .bio{
+    margin-top: .5rem;
+    color:#222
+  }
+  .personInformation .fallowingFallowers{
+    margin-top: 1em;
+  }
+
+  .personInformation .fallowingFallowers span{
+    margin-right: .5rem;
+  }
+
+
+  /* .leftOfTweet .profileInNewTweet:hover ~ .tweetIconsAndContent .tweetTopSection .personInformation, */
+  .tweetTopSection:hover .personInformation{
+    display: flex!important;
+    animation-name: displayInfo;
+    animation-duration: .75s;
+    animation-fill-mode:forwards;
+    /* animation-delay: 2s; */
+  }
+  
+  @keyframes displayInfo {
+    0%{
+      height:0rem;
+      opacity: 0;
+    }
+    50%{
+      height:5rem;
+      opacity: 0;
+    }
+    100%{
+      height:13rem;
+      opacity:1;
+    }
+  }
+
 }
 @media screen and (min-width: 750px) {
   .topProfile li:nth-child(2) {

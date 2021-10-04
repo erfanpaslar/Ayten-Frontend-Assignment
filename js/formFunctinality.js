@@ -8,3 +8,18 @@ document.getElementById("textAreaTweet").addEventListener("keyup", function () {
     tweetBtn.disabled = true;
   }
 });
+
+const clearIcon = document.getElementById("clearIcon");
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("keyup", function () {
+  if (this.value) {
+    clearIcon.style.display = "flex";
+  } else {
+    clearIcon.style.display = "none";
+  }
+});
+
+clearIcon.addEventListener("click", function () {
+  searchInput.value =""
+  clearIcon.style.display = "none";
+})

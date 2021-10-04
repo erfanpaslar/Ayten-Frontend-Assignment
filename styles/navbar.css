@@ -5,10 +5,11 @@
   display: block;
   width: 100%;
   border: 1px solid #f2f2f2;
-  /* box-shadow: 0px 0px 7px #00000005; */
-  z-index: 2;
+  z-index: 3;
   overflow-y: scroll;
+  transition: width 0.2s;
 }
+
 .navbar::-webkit-scrollbar {
   width: 0;
 }
@@ -41,7 +42,7 @@
   padding: 1rem;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #1d9af1;
+  background-color: var(--blueBtnsColor);
   position: fixed;
   bottom: 4.5rem;
   right: 1.2rem;
@@ -88,10 +89,6 @@
   .hideOnSmall {
     display: inline;
   }
-  .homeText {
-    font-size: 1.2rem;
-    margin-left: 0rem;
-  }
   .hideOnMedium {
     display: none;
   }
@@ -100,6 +97,7 @@
     height: 100vh;
     min-width: 4.5rem;
     width: 15%;
+    max-width: 308px;
   }
   .navbar {
     width: 15%;
@@ -107,6 +105,7 @@
     min-width: 4.5rem;
     padding-right: 0.5rem;
     box-sizing: border-box;
+    max-width: 308px;
   }
   .navbar ul {
     z-index: 2;
@@ -156,14 +155,37 @@
   .navbar {
     width: 18%;
   }
+  .navbar ul {
+    padding: 0.3rem .5rem;
+  }
 }
-
+.showFrom1000{
+  display: none;
+}
+.hideFrom1000{
+  display: inline;
+}
 @media screen and (min-width: 1000px) {
   .leftNavbarIllusion {
     width: 10%;
   }
   .navbar {
     width: 10%;
+  }
+  .showFrom1000{
+    display: inline;
+  }
+  .hideFrom1000{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .leftNavbarIllusion {
+    width: 14%;
+  }
+  .navbar {
+    width: 14%;
   }
 }
 
